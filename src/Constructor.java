@@ -25,29 +25,42 @@ public class Constructor {
         apellido = obj.apellido;
     }
     public void sacarFactorial(){
-        int numero = 5;
-        System.out.println( "El factorial de " + numero + " es: " + factorial( numero ) );
-    }
-    public static int factorial( int numero ) {
-        int fact = 1;
-        for( int i = 1; i <= numero; i++ ) {
-            fact *= i;
+        int n = 5;
+        int factorial = 1;
+        for( int i = 1; i <= n; i++ ) {
+            factorial *= i;
         }
-        return fact;
+        System.out.println( "El factorial de " + n + " es: " + factorial );
     }
+    
     public void sacarFactorial(int n){//
         System.out.println("Sacando factorial de n");
     }
-    public void fibonaci(){//
-        System.out.println("Sacar el n hasta el n1 fibonaci");
+    
+    public void fibonaci(){
+        int suma;
+        int a = 0;
+        int b = 1;
+        int fin = 5;
+        int inicio;
+        System.out.println("El fibonaci de los "+ fin + " primeros termino es: ");
+        for(inicio = 1; inicio <= fin; inicio = inicio +1){
+            suma = a + b;
+            a = b;
+            b = suma;
+            
+            System.out.println(b + " ");
+        }
     }
-    public void masaCorporal(){//
-        int peso = 84;
-        int estatura = 150;
+    public void masaCorporal(){
+        int peso = 85;
+        float est = 1.70f;
+        float imc;
+        imc = ((float)peso/(est*est));
         
-        System.out.println("Sacando masa corporal de una persona");
-        
+        System.out.println("El indice de Masa Corporal es "+imc);
     }
+    
     public void buscarLetra(){
         //System.out.println("Busca cuantas vocales tiene una cadena");
         int contvocales = 0;
